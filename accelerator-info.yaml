@@ -1,0 +1,32 @@
+id: 5445d8dd-dd17-45ee-bc77-29b8427568db
+timestamp: 2023-12-05T15:31:48.948Z
+source: TAP-GUI
+username: guest
+accelerator:
+  name: java-rest-service
+fragments:
+  - name: build-wrapper-gradle
+  - name: build-wrapper-maven
+  - name: live-update
+  - name: spring-boot-database
+  - name: spring-boot-h2
+  - name: spring-boot-mysql
+  - name: spring-boot-postgresql
+  - name: tap-workload
+  - name: testcontainers-mysql
+  - name: testcontainers-postgresql
+options:
+  bsGitBranch: main
+  projectName: java-rest-service
+  artifactId: customer-profile
+  groupId: com.example
+  packageName: com.example.customerprofile
+  buildTool: maven
+  exposeOpenAPIEndpoint: false
+  databaseType: postgres
+  databaseMigrationTool: flyway
+  databaseIntegrationTestType: testcontainers
+  includeBuildToolWrapper: true
+  databaseName: customer-database
+  liveUpdateIDESupport: true
+  bsGitRepository: github.com?owner=0x2615&repo=tanzu-java-restful-web-app
